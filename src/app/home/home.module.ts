@@ -8,11 +8,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { BrowserModule } from '@angular/platform-browser';
 
-
 @NgModule({
-  declarations: [
-    HomeComponent,
-  ],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -21,8 +18,6 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     HttpClientModule,
     RouterModule,
-
-
-  ]
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}
