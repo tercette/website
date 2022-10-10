@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <!-- Page Title -->
+    <title>Leandro Tercette - Personal Portfolio</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" href="assets/img/favicon.png" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="/assets/css/slick.css" />
+    <link rel="stylesheet" href="/assets/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="js/directives/angular-formspree.js"></script>
+  </head>
+
+  <body id="home" class="st-about-wrap">
+    <!-- Start Header Section -->
+    <header class="st-site-header st-style1 st-sticky-header">
+      <div class="st-main-header">
+        <div class="container">
+          <div class="st-main-header-in">
+            <div class="st-main-header-left">
+              <!-- <a class="st-site-branding" href="index.html"
+                ><img src="/assets/img/logoter7.png" alt="Davis"
+              /></a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Start Hero Secton -->
+    <div class="st-height-b80 st-height-lg-b80"></div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+      <div class="container">
+        <div class="st-section-heading st-style1">
+          <h4 class="st-section-heading-title">Try my apps</h4>
+          <h2 class="st-section-heading-subtitle">Try my apps</h2>
+        </div>
+        <div class="st-height-b25 st-height-lg-b25"></div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="st-portfolio-single st-style1 st-lightgallery">
+          <div class="st-portfolio-item">
+            <a class="st-portfolio st-zoom st-lightbox-item">
+              <div class="st-portfolio-img st-zoom-in">
+                <img
+                  src="assets/img/portfolio/portfolio1.jpg"
+                  alt="portfolio"
+                />
+              </div>
+              <div class="st-portfolio-item-hover">
+                <i class="fas fa-plus-circle"></i>
+                <h5>SolidWorks CAE Especialist</h5>
+                <p>Engineering</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- <section class="st-hero-wrap st-parallax">
+      <div class="st-hero st-style1 st-ripple-version">
+        <div class="container">
+          <div class="st-hero-text">
+            <h3>Hello, I’m</h3>
+            <h1>Leandro <br />Tercette</h1>
+            <h2>Professional Engineer</h2>
+            <div class="st-hero-btn">
+              <a
+                href="#contact"
+                class="st-btn st-style1 st-color1 st-smooth-move"
+                >Talk to me !</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- End Hero Seciton -->
+
+    <!-- Start About Seciton -->
+
+    <!-- End About Seciton -->
+
+    <!-- Start Service Seciton -->
+
+    <!-- End Service Seciton -->
+
+    <!-- Start Skill Seciton -->
+
+    <!-- End Skill Seciton -->
+
+    <!-- Start Resume Seciton -->
+
+    <!-- End Resume Seciton -->
+
+    <!-- Start Portfolio Seciton -->
+
+    <!-- End Portfolio Seciton -->
+
+    <!-- Start Review Seciton -->
+
+    <!-- End Review Seciton -->
+
+    <!-- Start Contact Seciton -->
+    <section id="contact" class="st-dark-bg">
+      <div class="st-height-b100 st-height-lg-b80"></div>
+      <div class="container">
+        <div class="st-section-heading st-style1">
+          <h4 class="st-section-heading-title">CONTACT ME</h4>
+          <h2 class="st-section-heading-subtitle">CONTACT ME</h2>
+        </div>
+        <div class="st-height-b25 st-height-lg-b25"></div>
+      </div>
+
+      <!-- Contact Container -->
+
+      <div class="container" style="padding: none">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="st-contact-title">Just say Hello</h3>
+            <div id="form-group"></div>
+            <form  #contactForm="ngForm">
+              <div class="st-form-field">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Type your Name"
+                  required
+                  ngModel
+                  required
+                  #name="ngModel"
+                />
+                <div
+                  *ngIf="!name.valid && name.touched"
+                  class="alert alert-danger"
+                  role="alert"
+                >
+                  Name is mandatory
+                </div>
+              </div>
+              <div class="st-form-field">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="email@email.com"
+                  ngModel
+                  required
+                  #email="ngModel"
+                />
+                <div
+                  *ngIf="!email.valid && email.touched"
+                  class="alert alert-danger"
+                  role="alert"
+                >
+                  E-mail is mandatory
+                </div>
+              </div>
+              <div class="st-form-field">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Type your Subject"
+                  ngModel
+                  required
+                  #subject="ngModel"
+                />
+                <div
+                  *ngIf="!subject.valid && subject.touched"
+                  class="alert alert-danger"
+                  role="alert"
+                >
+                  Subject is mandatory
+                </div>
+              </div>
+              <div class="st-form-field">
+                <textarea
+                  cols="30"
+                  rows="10"
+                  id="msg"
+                  name="messages"
+                  placeholder="Type your Message"
+                  ngModel
+                  required
+                  #messages="ngModel"
+                >
+                </textarea>
+              </div>
+
+              <button
+
+                [disabled]="!contactForm.valid"
+                class="st-btn st-style1 st-color1"
+                type="submit"
+                value="Send"
+                id="submit"
+                name="submit"
+              >
+
+              </button>
+              <ng-container >
+                <div
+                  class="alert alert-success alert-dismissible fade show"
+                  role="alert"
+                >
+                  <strong>Success, your e-mail has been sent</strong>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </ng-container>
+            </form>
+          </div>
+          <div id="status" class="error"></div>
+        </div>
+        <div class="st-height-b0 st-height-lg-b30"></div>
+
+        <div class="col-lg-6">
+          <div class="st-height-b0 st-height-lg-b40"></div>
+          <h3 class="st-contact-title">Contact Info</h3>
+          <div class="st-contact-text">
+            Feel free to contact me anytime, I`m avaliable 24/7.
+          </div>
+          <div class="st-contact-info-wrap">
+            <div class="st-single-contact-info">
+              <a href="mailto:leandro@leandrotercette.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <div class="st-single-info-details">
+                <a aria-label="take the phone" href="mailto:leandro@leandrotercette.com"></a>
+                <h4>Email</h4>
+                <a href="mailto:leandro@leandrotercette.com"
+                  >Send me an email</a
+                >
+              </div>
+            </div>
+            <div class="st-single-contact-info">
+              <a href="tel:+5511991485161">
+                <i class="fas fa-phone-alt"></i>
+              </a>
+              <div class="st-single-info-details">
+                <h4>Phone</h4>
+                <span><a href="tel:+5511991485161">+5511-991-485-161</a></span>
+              </div>
+            </div>
+            <div class="st-single-contact-info">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="st-single-info-details">
+                <h4>Address</h4>
+                <span>South area, <br />Sao Paulo, Sao Paulo, Brazil</span>
+              </div>
+            </div>
+            <div class="st-social-info">
+              <div class="st-social-text">
+                Visite my social profile and get connected
+              </div>
+              <div class="st-social-link">
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon">
+                    <a href="https://github.com/leandroter7" URL>
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </span>
+                  <span class="st-icon-name">Github</span>
+                </a>
+
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon">
+                    <a href="https://join.skype.com/invite/I3vpmleiFWIt" URL>
+                      <i class="fab fa-skype"></i>
+                    </a>
+                  </span>
+                  <span class="st-icon-name">Skype</span>
+                </a>
+
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon">
+                    <a href="https://www.youtube.com/c/LeandroTercette" URL>
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </span>
+                  <span class="st-icon-name">YouTube</span>
+                </a>
+
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon">
+                    <a href="https://www.instagram.com/leandrotercette/" URL>
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </span>
+                  <span class="st-icon-name">Instagram</span>
+                </a>
+
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon">
+                    <a href="https://www.linkedin.com/in/leandrotercette/" URL>
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </span>
+                  <span class="st-icon-name">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="st-height-b100 st-height-lg-b80"></div>
+    </section>
+    <!-- End Contact Seciton -->
+
+    <!-- Start Footer Seciton -->
+    <footer>
+      <div class="container">
+        <div class="st-copyright-wrap text-center">
+          <div class="st-copyright-text">
+            © 2021. Designed by Leandro Tercette. All right reserved.
+          </div>
+        </div>
+      </div>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+      />
+      <a
+        href="https://wa.me/5511991485161?text=Hi%20Leandro"
+        style="
+          box-sizing: 10px;
+          position: fixed;
+          width: 60px;
+          height: 60px;
+          bottom: 75px;
+          right: 20px;
+          background-color: #25d366;
+          color: #fff;
+          border-radius: 40px;
+          text-align: center;
+          font-size: 30px;
+          box-shadow: 1px 1px 2px #888;
+          z-index: 1000;
+        "
+        target="_blank"
+      >
+        <i style="margin-top: 16px" class="fa fa-whatsapp"></i>
+      </a>
+    </footer>
+    <!-- End Footer Seciton -->
+
+    <!-- Scripts -->
+    <!-- <script src="assets/js/jquery-1.12.4.min.js"></script> -->
+    <script src="assets/js/jquery.slick.min.js"></script>
+    <script src="assets/js/lightgallery.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/ripples.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

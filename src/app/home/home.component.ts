@@ -6,6 +6,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Injectable()
 @Component({
@@ -17,10 +18,19 @@ import { NgForm } from '@angular/forms';
 export class HomeComponent implements OnInit {
   Sendmessage: boolean = true;
   visible: boolean = false;
+  alert: boolean = false;
+
+  constructor(private http: HttpClient, private router: Router) { }
+
+  ngOnInit(): void { }
 
   onclick() {
     this.Sendmessage = !this.Sendmessage;
     this.visible = !this.visible;
+  }
+
+  app(){
+    this.router.navigate(['/apps'])
   }
 
   onSubmit(contactForm: NgForm) {
@@ -50,14 +60,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  constructor(private http: HttpClient) {}
 
-  alert: boolean = false;
 
-  ngOnInit(): void {}
+
+
+
 }
-function subscribe(
-  arg0: (dados: any) => void
-): import('rxjs').OperatorFunction<Object, unknown> {
-  throw new Error('Function not implemented.');
-}
+

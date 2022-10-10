@@ -8,13 +8,15 @@ import { SimulatorsModule } from './simulators/simulators.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common'; //fixed the reload crashes on the webbrowser online
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AppsComponent } from './apps/apps.component'; //fixed the reload crashes on the webbrowser online
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppsComponent
   ],
 
   imports: [
