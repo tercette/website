@@ -34,8 +34,12 @@
     <!-- End Header Section -->
 
     <!-- Start Hero Secton -->
+
     <div class="st-height-b80 st-height-lg-b80"></div>
     <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="st-hero-btn">
+      <a routerLink="" class="st-btn st-style1 st-color5 st-smooth-move">Back to home page</a>
+    </div>
       <div class="container">
         <div class="st-section-heading st-style1">
           <h4 class="st-section-heading-title">Try my apps</h4>
@@ -47,18 +51,19 @@
       <div class="col-lg-4 col-md-6">
         <div class="st-portfolio-single st-style1 st-lightgallery">
           <div class="st-portfolio-item">
-            <a class="st-portfolio st-zoom st-lightbox-item">
+            <a href="https://livro-de-receita-6326a.web.app/auth" class="st-portfolio st-zoom st-lightbox-item">
               <div class="st-portfolio-img st-zoom-in">
                 <img
-                  src="assets/img/portfolio/portfolio1.jpg"
-                  alt="portfolio"
+                src="assets/img/apps/appReceita.png"
+                alt="portfolio"
                 />
               </div>
               <div class="st-portfolio-item-hover">
+                <h5>Taste it in production environment!</h5>
                 <i class="fas fa-plus-circle"></i>
-                <h5>SolidWorks CAE Especialist</h5>
-                <p>Engineering</p>
               </div>
+
+
             </a>
           </div>
         </div>
@@ -125,7 +130,7 @@
           <div class="col-lg-6">
             <h3 class="st-contact-title">Just say Hello</h3>
             <div id="form-group"></div>
-            <form  #contactForm="ngForm">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
               <div class="st-form-field">
                 <input
                   type="text"
@@ -196,7 +201,7 @@
               </div>
 
               <button
-
+                (click)="onclick()"
                 [disabled]="!contactForm.valid"
                 class="st-btn st-style1 st-color1"
                 type="submit"
@@ -204,9 +209,9 @@
                 id="submit"
                 name="submit"
               >
-
+                {{ Sendmessage ? "Send message" : "Message sent" }}
               </button>
-              <ng-container >
+              <ng-container *ngIf="visible">
                 <div
                   class="alert alert-success alert-dismissible fade show"
                   role="alert"
