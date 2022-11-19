@@ -1,21 +1,22 @@
-@media only screen  and (max-device-width :700px) {
-  body{
-    background:none;
+@media only screen and (max-device-width :700px) {
+  body {
+    background: none;
   }
 }
-@media only screen  and (min-device-width: 701px) {
-   body {
-  background-repeat: no-repeat ;
-  background-image: src="assets/img/leandro2.PNG";
-  background-attachment: fixed;
-  background-position: left, right
-}
+
+@media only screen and (min-device-width: 701px) {
+  body {
+    background-repeat: no-repeat;
+    background-image: src="assets/img/leandro2.PNG";
+    background-attachment: fixed;
+    background-position: left, right
+  }
 }
 
 iframe {
 
-  margin:auto;
-  display:flex;
+  margin: auto;
+  display: flex;
   height: 700px;
   max-width: 1000px;
 
@@ -25,6 +26,15 @@ iframe {
   object-fit: cover;
 }
 
-.ng-invalid.ngtouched:not(form){
+.ng-invalid.ngtouched:not(form) {
   border: 1px solid red;
+}
+
+.wow {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
