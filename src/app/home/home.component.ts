@@ -32,6 +32,9 @@ export class HomeComponent implements OnInit {
     app() {
         this.router.navigate(['/apps'])
     }
+    goToSimulators() {
+        this.router.navigate(['/simulators'])
+    }
 
 
     onSubmit(contactForm: NgForm) {
