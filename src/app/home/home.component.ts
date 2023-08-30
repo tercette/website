@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
             const headers = new HttpHeaders({ 'Content-type': 'application/json' });
             this.http
                 .post(
-                    'https://formspree.io/f/meqvpjwz',
+                    'https://formspree.io/f/xyyqjygw',
                     {
                         replyto: email.email,
                         subject: email.subject,

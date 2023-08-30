@@ -31,9 +31,43 @@ iframe {
 }
 
  .fadeInRight {
-  border-radius: 50%;
+  border-radius: 40%;
+
+}
+
+#softSKills {
+  text-align: right;
 }
 
 .imgTestimonial {
   border-radius: 50%;
+}
+
+.img-container {
+  max-width: 40%;
+  height: auto;
+  display: inline-block;
+}
+
+.img-container img {
+  width: 40%;
+  height: auto;
+}
+
+.whatsapp-link {
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  color: #25D366;
+}
+
+.st-hero {
+  display: flex;
+  align-items: center;
+}
+
+.img-container {
+  margin-top: 10%;
+  margin-left: 20%; /* Empurrar a imagem para a direita */
 }
