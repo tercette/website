@@ -62,6 +62,10 @@ iframe {
   color: #25D366;
 }
 
+.experience:hover {
+  color: #2562d3;
+}
+
 .st-hero {
   display: flex;
   align-items: center;
