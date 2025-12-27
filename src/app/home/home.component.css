@@ -3,12 +3,10 @@
     background: none;
   }
 
-  /* Espaçamento do topo */
   .st-height-b80 {
     height: 70px !important;
   }
 
-  /* Header menor em mobile */
   .st-site-header {
     padding: 0 !important;
     position: fixed !important;
@@ -81,7 +79,6 @@
     font-family: 'Roboto', sans-serif !important;
   }
 
-  /* Social links - tablet/mobile */
   .st-hero-img {
     position: relative !important;
     overflow: visible !important;
@@ -99,7 +96,6 @@
     margin-top: 20px !important;
     padding: 15px 0 !important;
     transform: none !important;
-    /* Remove o efeito de fundo/borda */
     background: none !important;
     border: none !important;
     border-radius: 0 !important;
@@ -117,7 +113,6 @@
     margin: 5px !important;
   }
 
-  /* Menu de navegação - mobile */
   .st-main-header-right {
     display: block !important;
     width: 100% !important;
@@ -221,7 +216,6 @@ iframe {
   border-radius: 50%;
 }
 
-/* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -252,14 +246,12 @@ iframe {
   color: #fff;
 }
 
-/* WhatsApp button mobile position */
 @media (max-width: 768px) {
   .whatsapp-float {
     right: 20px;
     bottom: 20px;
   }
 
-  /* Hero buttons full width on mobile */
   .st-hero-btn {
     width: 100%;
   }
@@ -270,7 +262,6 @@ iframe {
     text-align: center;
   }
 
-  /* Center hero text (name) on mobile */
   .st-hero-text {
     text-align: center;
   }
