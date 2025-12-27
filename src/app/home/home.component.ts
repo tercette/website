@@ -39,28 +39,29 @@ export class HomeComponent implements OnInit {
 
     onSubmit(contactForm: NgForm) {
         if (contactForm.valid) {
-            const email = contactForm.value;
+            const formData = contactForm.value;
             const headers = new HttpHeaders({ 'Content-type': 'application/json' });
             this.http
                 .post(
                     'https://formspree.io/f/meqvpjwz',
                     {
-                        replyto: email.email,
-                        subject: email.subject,
-                        messages: email.messages,
+                        name: formData.name,
+                        _replyto: formData.email,
+                        _subject: formData.subject,
+                        message: formData.messages,
                     },
-
                     { headers: headers }
                 )
-                .subscribe((response) => {
-                    console.log(response);
-                });
-
-            this.alert = true;
-            if (contactForm.valid) {
-                console.log('Formulario enviado.');
-                contactForm.reset();
-            }
+                .subscribe(
+                    (response) => {
+                        console.log('Email enviado com sucesso:', response);
+                        this.alert = true;
+                        contactForm.reset();
+                    },
+                    (error) => {
+                        console.error('Erro ao enviar email:', error);
+                    }
+                );
         }
     }
 
