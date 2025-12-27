@@ -251,3 +251,27 @@ iframe {
 .whatsapp-float i {
   color: #fff;
 }
+
+/* WhatsApp button mobile position */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  /* Hero buttons full width on mobile */
+  .st-hero-btn {
+    width: 100%;
+  }
+
+  .st-hero-btn .st-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  /* Center hero text (name) on mobile */
+  .st-hero-text {
+    text-align: center;
+  }
+}
