@@ -24,6 +24,13 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void { }
 
+    scrollTo(sectionId: string): void {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
     onclick() {
         this.Sendmessage = !this.Sendmessage;
         this.visible = !this.visible;

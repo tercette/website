@@ -12,13 +12,13 @@
             <div class="st-main-header-right">
               <div class="st-nav">
                 <ul class="st-nav-list st-onepage-nav">
-                  <li><a href="#home" class="st-smooth-move">Home</a></li>
-                  <li><a href="#about" class="st-smooth-move">About</a></li>
-                  <li><a href="#resume" class="st-smooth-move">Resume</a></li>
+                  <li><a (click)="scrollTo('home')" class="st-smooth-move">Home</a></li>
+                  <li><a (click)="scrollTo('about')" class="st-smooth-move">About</a></li>
+                  <li><a (click)="scrollTo('resume')" class="st-smooth-move">Resume</a></li>
                   <li>
-                    <a href="#portfolio" class="st-smooth-move">Portfolio</a>
+                    <a (click)="scrollTo('portfolio')" class="st-smooth-move">Portfolio</a>
                   </li>
-                  <li><a href="#contact" class="st-smooth-move">Contact</a></li>
+                  <li><a (click)="scrollTo('contact')" class="st-smooth-move">Contact</a></li>
                 </ul>
                 <div class="sp-phone">
                   <svg viewBox="0 0 513.64 513.64">
@@ -55,7 +55,7 @@
             <h2>Software Engineer</h2>
             <div class="st-hero-btn">
               <a
-                href="#contact"
+                (click)="scrollTo('contact')"
                 class="st-btn st-style1 st-color5 st-smooth-move"
                 >Talk to me now!</a
               >
