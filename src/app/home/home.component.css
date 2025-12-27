@@ -275,3 +275,21 @@ iframe {
     text-align: center;
   }
 }
+
+.st-resume-timeline.current-job::before {
+  background-color: #00c853;
+  border-color: #00c853;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 200, 83, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+  }
+}
