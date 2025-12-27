@@ -61,12 +61,10 @@ export class HomeComponent implements OnInit {
                 )
                 .subscribe(
                     (response) => {
-                        console.log('Email enviado com sucesso:', response);
                         this.alert = true;
                         contactForm.reset();
                     },
                     (error) => {
-                        console.error('Erro ao enviar email:', error);
                     }
                 );
         }

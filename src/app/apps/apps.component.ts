@@ -43,12 +43,10 @@ export class AppsComponent implements OnInit {
                 { headers: headers }
             )
             .subscribe((response) => {
-                console.log(response);
             });
 
         this.alert = true;
         if (contactForm.valid) {
-            console.log('Formulario enviado.');
             contactForm.reset();
         }
     }
