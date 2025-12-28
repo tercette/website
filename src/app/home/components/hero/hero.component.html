@@ -10,7 +10,8 @@
         <div class="st-hero-btn">
           <a
             href="javascript:void(0)"
-            (click)="onScrollTo('contact')"
+            (click)="onScrollTo('contact', $event)"
+            (touchend)="onScrollTo('contact', $event)"
             class="st-btn st-style1 st-color5 st-smooth-move"
             >Talk to me now!</a
           >

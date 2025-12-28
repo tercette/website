@@ -7,13 +7,13 @@
         <div class="st-main-header-right">
           <div class="st-nav">
             <ul class="st-nav-list st-onepage-nav">
-              <li><a href="javascript:void(0)" (click)="onScrollTo('home')" class="st-smooth-move">Home</a></li>
-              <li><a href="javascript:void(0)" (click)="onScrollTo('about')" class="st-smooth-move">About</a></li>
-              <li><a href="javascript:void(0)" (click)="onScrollTo('resume')" class="st-smooth-move">Resume</a></li>
+              <li><a href="javascript:void(0)" (click)="onScrollTo('home', $event)" (touchend)="onScrollTo('home', $event)" class="st-smooth-move">Home</a></li>
+              <li><a href="javascript:void(0)" (click)="onScrollTo('about', $event)" (touchend)="onScrollTo('about', $event)" class="st-smooth-move">About</a></li>
+              <li><a href="javascript:void(0)" (click)="onScrollTo('resume', $event)" (touchend)="onScrollTo('resume', $event)" class="st-smooth-move">Resume</a></li>
               <li>
-                <a href="javascript:void(0)" (click)="onScrollTo('portfolio')" class="st-smooth-move">Portfolio</a>
+                <a href="javascript:void(0)" (click)="onScrollTo('portfolio', $event)" (touchend)="onScrollTo('portfolio', $event)" class="st-smooth-move">Portfolio</a>
               </li>
-              <li><a href="javascript:void(0)" (click)="onScrollTo('contact')" class="st-smooth-move">Contact</a></li>
+              <li><a href="javascript:void(0)" (click)="onScrollTo('contact', $event)" (touchend)="onScrollTo('contact', $event)" class="st-smooth-move">Contact</a></li>
             </ul>
             <div class="sp-phone">
               <svg viewBox="0 0 513.64 513.64">

@@ -8,7 +8,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent {
   @Output() scrollToSection = new EventEmitter<string>();
 
-  onScrollTo(sectionId: string): void {
+  onScrollTo(sectionId: string, event?: Event): void {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
     this.scrollToSection.emit(sectionId);
   }
 }

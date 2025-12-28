@@ -5,16 +5,47 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Fix mobile touch issues - particles canvas should not block touches */
 #particles-js {
-  pointer-events: none;
+  pointer-events: none !important;
+}
+
+/* Ensure header is always on top and clickable */
+.st-site-header {
+  position: fixed !important;
+  z-index: 99999 !important;
 }
 
 /* Ensure navigation links are touch-friendly on mobile */
+.st-nav-list li {
+  position: relative;
+  z-index: 99999;
+}
+
 .st-nav-list a,
 .st-hero-btn a,
 .st-smooth-move {
   cursor: pointer;
   touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
   user-select: none;
   -webkit-user-select: none;
+  position: relative;
+  z-index: 99999;
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
+  line-height: 44px;
+}
+
+/* Ensure hero image doesn't block header */
+.st-hero-img,
+.st-hero-wrap,
+.st-hero {
+  z-index: 1 !important;
+}
+
+/* Fix for Xiaomi/MIUI browsers */
+@media (pointer: coarse) {
+  .st-nav-list a {
+    padding: 12px 8px !important;
+  }
 }
