@@ -1,7 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Compensate for fixed header when scrolling to anchors */
+#home, #about, #resume, #portfolio, #contact {
+  scroll-margin-top: 100px;
+}
+
+/* Fix header layout on all screen sizes */
+.st-main-header-left {
+  display: none !important;
+}
+
+.st-main-header-right {
+  width: 100% !important;
+}
+
+.st-nav {
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+.st-nav-list {
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 99999 !important;
+}
+
+.st-nav-list li {
+  flex-shrink: 0 !important;
+}
+
+/* Fix: phone container overlapping menu links */
+.sp-phone {
+  pointer-events: none;
+}
+
+.sp-phone a {
+  pointer-events: auto;
+}
+
+.st-site-header .container {
+  pointer-events: none;
+}
+
+.st-site-header .st-nav,
+.st-site-header .st-nav-list,
+.st-site-header .st-nav-list a {
+  pointer-events: auto !important;
+}
+
+/* Push hero content down on mobile to avoid header overlap */
+@media screen and (max-width: 991px) {
+  .st-hero-text {
+    padding-top: 100px !important;
+  }
+}
 
 /* Fix mobile touch issues - particles canvas should not block touches */
 #particles-js {
