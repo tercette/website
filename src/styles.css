@@ -64,6 +64,23 @@ body {
 @media screen and (max-width: 991px) {
   .st-hero-text {
     padding-top: 100px !important;
+    position: relative;
+    z-index: 100 !important;
+    padding-bottom: 20px !important;
+  }
+
+  .st-hero-img {
+    z-index: 1 !important;
+  }
+
+  .st-hero-btn {
+    margin-top: 15px !important;
+  }
+
+  .st-hero-btn .st-btn {
+    font-size: 12px !important;
+    padding: 10px 15px !important;
+    min-width: auto !important;
   }
 }
 
