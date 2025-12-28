@@ -2,3 +2,19 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Fix mobile touch issues - particles canvas should not block touches */
+#particles-js {
+  pointer-events: none;
+}
+
+/* Ensure navigation links are touch-friendly on mobile */
+.st-nav-list a,
+.st-hero-btn a,
+.st-smooth-move {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
