@@ -1,0 +1,12 @@
+/* No mobile a foto some (ver _hero.scss); centralizamos o texto do hero
+   para o nome (e o efeito de partículas Three.js, que segue o <h1>) ficarem
+   centralizados na tela. */
+@media (max-width: 991px) {
+  .st-hero-text {
+    text-align: center;
+  }
+
+  .st-hero-text .st-hero-btn a {
+    display: inline-block;
+  }
+}

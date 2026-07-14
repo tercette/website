@@ -10,6 +10,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { HeroWebglComponent } from './components/hero-webgl/hero-webgl.component';
+import { NameParticlesComponent } from './components/name-particles/name-particles.component';
+import { BgWavesComponent } from '../shared/bg-waves/bg-waves.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -19,7 +22,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, FooterComponent, WhatsappBtnComponent, HeroComponent, AboutComponent, ServicesComponent, SkillsComponent, ResumeComponent, PortfolioComponent, ReviewsComponent, ContactComponent],
+  declarations: [HomeComponent, HeaderComponent, FooterComponent, WhatsappBtnComponent, HeroComponent, HeroWebglComponent, NameParticlesComponent, BgWavesComponent, AboutComponent, ServicesComponent, SkillsComponent, ResumeComponent, PortfolioComponent, ReviewsComponent, ContactComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

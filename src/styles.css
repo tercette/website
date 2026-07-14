@@ -130,3 +130,18 @@ body {
     padding: 12px 8px !important;
   }
 }
+
+/* ---- Fundo de ondas WebGL global (app-bg-waves) ----
+   O canvas fica fixo atrás de tudo (z-index:-1). Tornamos as seções escuras
+   transparentes para as ondas aparecerem na página inteira. As seções claras
+   (ex.: st-gray-bg) e o header permanecem com o fundo próprio. */
+body {
+  background-color: transparent !important;
+}
+
+.st-dark-bg,
+.st-hero-wrap,
+.st-hero.st-style1,
+.st-hero.st-style2 {
+  background-color: transparent !important;
+}

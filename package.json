@@ -22,11 +22,13 @@
     "@angular/router": "~13.4.0",
     "@fontsource/roboto": "^5.2.9",
     "@fortawesome/fontawesome-free": "^7.1.0",
+    "@types/three": "^0.160.0",
     "angular-dark-mode": "^3.0.1",
     "bootstrap": "^5.1.0",
     "jquery": "^3.6.0",
     "lightgallery": "^1.6.12",
     "rxjs": "^6.6.7",
+    "three": "^0.160.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
